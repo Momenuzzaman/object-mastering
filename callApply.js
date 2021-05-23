@@ -5,9 +5,9 @@ const person ={
    fullName: function(){
       console.log(this.firstName,this.lastName);
    },
-   bill: function(amount){
+   bill: function(amount, tax){
        console.log(this)
-       this.salary = this.salary-amount;
+       this.salary = this.salary-amount-tax;
        return this.salary;
    }
 };
@@ -23,3 +23,14 @@ person2Bill(2000);
 person2Bill(2000);
 console.log(person2.salary);
 console.log(person.salary);
+
+
+const person3 = {
+    firstName:  "hero",
+    lastName: "alom",
+    salary: 25000
+}
+// call
+
+person.bill.call(person3,3000,500);
+console.log(person3.salary)
