@@ -34,3 +34,14 @@ const person3 = {
 
 person.bill.call(person3,3000,500);
 console.log(person3.salary)
+
+
+const person4 = {
+    firstName: "Mr",
+    lastName: "Ulubil",
+    salary: 30000
+}
+
+// apply
+person.bill.apply(person4,[3000, 2000]);
+console.log(person4.salary);
