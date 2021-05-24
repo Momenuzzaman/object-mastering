@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is not confused anyone</h1>
+
+    <script>
+        const object = {
+            name: "Kuddus Ali",
+            getFullName: function(){
+                console.log(this);
+                return "Mr" +this.name
+            }
+        }
+        object.getFullName();
+
+        const object2 ={
+            name: "Abbas Ali"
+        }
+
+        object2.getFullName = object.getFullName;
+        object2.getFullName();
+    </script>
+</body>
+</html>
